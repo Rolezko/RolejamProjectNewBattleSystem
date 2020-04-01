@@ -1,4 +1,4 @@
-package Rolejam;
+package RolejamNewBattle;
 	
 import java.io.IOException;
 
@@ -21,7 +21,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		
 	 try {
-         FXMLLoader loader=new FXMLLoader(getClass().getResource("/Rolejam/MainScene.fxml"));
+         FXMLLoader loader=new FXMLLoader(getClass().getResource("/RolejamNewBattle/MainScene.fxml"));
          Parent root = (Parent) loader.load();
          Stage stage = new Stage();
          stage.setTitle("MainScene");

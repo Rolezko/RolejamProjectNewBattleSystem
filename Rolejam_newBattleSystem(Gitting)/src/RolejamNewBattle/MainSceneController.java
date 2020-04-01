@@ -1,4 +1,4 @@
-package Rolejam;
+package RolejamNewBattle;
 
 import java.io.IOException;
 
@@ -46,7 +46,7 @@ public class MainSceneController {
 		
 		 try {
 			 
-	         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Rolejam/BattleScene.fxml"));
+	         FXMLLoader loader = new FXMLLoader(getClass().getResource("/RolejamNewBattle/BattleScene.fxml"));
 	         Parent root = (Parent) loader.load();
 	         Stage stage = new Stage();
 	         stage.setTitle("BattleScene");
