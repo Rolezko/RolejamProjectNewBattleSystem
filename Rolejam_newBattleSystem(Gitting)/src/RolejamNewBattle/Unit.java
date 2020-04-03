@@ -3,7 +3,7 @@ package RolejamNewBattle;
 public class Unit {
 	
 	public String Name;
-	public int CurrentHP, MaxHP, AttackPower, AttackSpeed, Defence, Level, ExpCurrent, ExpMax, ExpToNextLevel;
+	public int CurrentHP, MaxHP, AttackPower, AttackSpeed, Defence, Level, ExpCurrent, ExpMax, ExpToNextLevel, SpinCount;
 
 
 	public int getCurrentHP() {
@@ -54,5 +54,13 @@ public class Unit {
 	
 	public void setAttackSpeed(int AttackSpeed) {
 		this.AttackSpeed = AttackSpeed;
+	}
+	
+	public void setSpinCount(int SpinCount) {
+		this.SpinCount = SpinCount;
+	}
+	
+	public int getSpinCount() {
+		return this.SpinCount;
 	}
 }

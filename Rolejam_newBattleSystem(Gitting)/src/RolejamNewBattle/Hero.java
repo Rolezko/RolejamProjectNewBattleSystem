@@ -15,6 +15,7 @@ public Hero() {
 	Level = 1;
 	ExpCurrent = 0;
 	ExpMax = 5;
+	SpinCount = 2;
 	
 	
 }
