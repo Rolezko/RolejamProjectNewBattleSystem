@@ -32,13 +32,7 @@ public class MainSceneController {
 	@FXML
 	ChoiceBox<String> HeroStatMagicSelector;
 	
-	//String[] MagicList =  {" 1", " 2"};
 
-	/*
-	String[] texts = {"Attack", "Defence", "Magic"};
-	Random random = new Random ();
-	int pos = random.nextInt(texts.length);
-*/
 	
 	Hero Hero = new Hero();
 		
@@ -52,7 +46,7 @@ public class MainSceneController {
 		HeroExpL.setText(String.valueOf(Hero.ExpCurrent) + "/" + String.valueOf(Hero.ExpMax));
 		HeroExpPb.setProgress( (double) Hero.ExpCurrent / (double) Hero.ExpMax);
 		HeroLevelL.setText(String.valueOf(Hero.Level));
-		//HeroStatMagicSelector.setItems(FXCollections.observableArrayList(Hero.HeroMagicList));
+		HeroStatMagicSelector.setItems(FXCollections.observableArrayList(Hero.HeroMagicList));
 
 		
 		

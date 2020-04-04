@@ -6,21 +6,18 @@ public class Unit {
 	
 	public String Name;
 	public int CurrentHP, MaxHP, AttackPower, AttackSpeed, Defence, Level, ExpCurrent, ExpMax, ExpToNextLevel, SpinCount;
-	public String[] MagicList;
+	//public String[] MagicList;
+	
+	public ArrayList<String> MagicList = new ArrayList<String>();
 	
 	
 	
-	
-	public String[] getCurrentMagicList() {
+	public ArrayList<String> getCurrentMagicList() {
 		return this.MagicList;
 	}
 	
 	public void setMagicList(String NewMagic) {
-		/* Ошибка с Листами */
-		//List<String> arrlist = new ArrayList<String>();
-		//arrlist = Arrays.asList<String>(this.MagicList);
-	//	arrlist.add(NewMagic);
-		//this.MagicList = arrlist.toArray(this.MagicList);
+	this.MagicList.add(NewMagic);
 				
 	}
 

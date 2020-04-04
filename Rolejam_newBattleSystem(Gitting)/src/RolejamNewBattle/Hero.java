@@ -1,13 +1,14 @@
 package RolejamNewBattle;
 
+import java.util.ArrayList;
 
 public class Hero extends Unit {
 
 	boolean HeroCanLevelUp;
-	String[] HeroMagicList;
+	ArrayList<String> HeroMagicList;
 	
 public Hero() {
-	this.HeroMagicList = getCurrentMagicList();;
+	HeroMagicList = MagicList;
 	MaxHP = 50;
 	CurrentHP = MaxHP;
 	AttackPower = 4;
@@ -17,8 +18,9 @@ public Hero() {
 	ExpCurrent = 0;
 	ExpMax = 5;
 	SpinCount = 2;
+	setMagicList("Fireball");
 	
-	setMagicList("FireBall");
+
 	
 
 }
