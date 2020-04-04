@@ -4,9 +4,10 @@ package RolejamNewBattle;
 public class Hero extends Unit {
 
 	boolean HeroCanLevelUp;
+	String[] HeroMagicList;
 	
 public Hero() {
-	
+	this.HeroMagicList = getCurrentMagicList();;
 	MaxHP = 50;
 	CurrentHP = MaxHP;
 	AttackPower = 4;
@@ -17,8 +18,13 @@ public Hero() {
 	ExpMax = 5;
 	SpinCount = 2;
 	
+	setMagicList("FireBall");
 	
+
 }
+
+
+
 	public void giveExpToHero(int localExpTakes) {
 		ExpCurrent = ExpCurrent + localExpTakes;
 	}

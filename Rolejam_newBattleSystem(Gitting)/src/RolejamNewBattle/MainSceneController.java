@@ -1,14 +1,19 @@
 package RolejamNewBattle;
 
 import java.io.IOException;
+import java.util.Random;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Separator;
 import javafx.stage.Stage;
 
 
@@ -24,6 +29,17 @@ public class MainSceneController {
 	@FXML
 	Button FindBattleB;
 	
+	@FXML
+	ChoiceBox<String> HeroStatMagicSelector;
+	
+	//String[] MagicList =  {" 1", " 2"};
+
+	/*
+	String[] texts = {"Attack", "Defence", "Magic"};
+	Random random = new Random ();
+	int pos = random.nextInt(texts.length);
+*/
+	
 	Hero Hero = new Hero();
 		
 	public void UpdateHeroStat() {
@@ -36,6 +52,8 @@ public class MainSceneController {
 		HeroExpL.setText(String.valueOf(Hero.ExpCurrent) + "/" + String.valueOf(Hero.ExpMax));
 		HeroExpPb.setProgress( (double) Hero.ExpCurrent / (double) Hero.ExpMax);
 		HeroLevelL.setText(String.valueOf(Hero.Level));
+		//HeroStatMagicSelector.setItems(FXCollections.observableArrayList(Hero.HeroMagicList));
+
 		
 		
 		
