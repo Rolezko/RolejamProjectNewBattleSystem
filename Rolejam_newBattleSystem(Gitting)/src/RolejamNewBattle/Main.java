@@ -25,7 +25,7 @@ public class Main extends Application {
          Parent root = (Parent) loader.load();
          Stage stage = new Stage();
          stage.setTitle("MainScene");
-         stage.setScene(new Scene(root));
+         stage.setScene(new Scene(root));	
          stage.setResizable(false);
          MainSceneController localMainController = new MainSceneController();
          localMainController = loader.getController();

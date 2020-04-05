@@ -1,10 +1,7 @@
 package RolejamNewBattle;
 
 import java.io.IOException;
-import java.util.Random;
-
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.Separator;
 import javafx.stage.Stage;
 
 
@@ -47,10 +43,17 @@ public class MainSceneController {
 		HeroExpPb.setProgress( (double) Hero.ExpCurrent / (double) Hero.ExpMax);
 		HeroLevelL.setText(String.valueOf(Hero.Level));
 		HeroStatMagicSelector.setItems(FXCollections.observableArrayList(Hero.HeroMagicList));
+		HeroStatMagicSelector.setValue("-");
+		//Hero.SelectedMagic = HeroStatMagicSelector.getValue();
+		//System.out.println(Hero.SelectedMagic);
 
 		
 		
 		
+	}
+	
+	public void getSelectedMagic() {
+		Hero.SelectedMagic = HeroStatMagicSelector.getValue();
 	}
 	
 	@FXML
@@ -64,6 +67,7 @@ public class MainSceneController {
 	         stage.setTitle("BattleScene");
 	         stage.setScene(new Scene(root));
 	         stage.setResizable(false);
+	         getSelectedMagic();
 	         BattleSceneController localBSController = new BattleSceneController();
 	         localBSController = loader.getController();
 	         localBSController.Hero = this.Hero;

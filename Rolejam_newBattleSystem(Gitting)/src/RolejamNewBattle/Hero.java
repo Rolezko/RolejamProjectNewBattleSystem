@@ -18,7 +18,9 @@ public Hero() {
 	ExpCurrent = 0;
 	ExpMax = 5;
 	SpinCount = 2;
-	setMagicList("Fireball");
+	setMagicList("FireBall");
+	setMagicList("FrostBall");
+	
 	
 
 	

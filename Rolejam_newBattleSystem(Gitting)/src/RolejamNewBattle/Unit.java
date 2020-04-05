@@ -4,13 +4,20 @@ import java.util.*;
 
 public class Unit {
 	
-	public String Name;
+	public String Name, SelectedMagic;
 	public int CurrentHP, MaxHP, AttackPower, AttackSpeed, Defence, Level, ExpCurrent, ExpMax, ExpToNextLevel, SpinCount;
 	//public String[] MagicList;
 	
 	public ArrayList<String> MagicList = new ArrayList<String>();
 	
 	
+	public String getSelectedMagic() {
+		return this.SelectedMagic;
+	}
+	
+	public void setSelectedMagic(String selectedMagic) {
+		this.SelectedMagic = selectedMagic;
+	}
 	
 	public ArrayList<String> getCurrentMagicList() {
 		return this.MagicList;
